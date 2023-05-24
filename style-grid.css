@@ -1,0 +1,213 @@
+/* --- ELIMINAR MARGENES --> */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* --- IMAGEN BACKGROUND AMARILLA --> */
+
+body {
+    background-repeat: repeat-y;
+    background-position: right;
+    background-size: 50%;
+    max-width: 100%;
+    overflow-y:scroll;
+}
+
+/* --- CONTENEDOR PRINCIPAL --> */
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-row-gap: 20px;
+    background:rgba(192, 238, 228, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+
+    grid-template-columns: 60px repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto );
+
+    grid-template-areas:    "header contenido contenido sidebar"
+                            "header contenido contenido sidebar"
+                            "header boton1    boton2    sidebar"
+                            "header footer    footer    footer";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .boton1,
+.contenedor .boton2 {
+	padding: 20px;
+	border-radius: 4px;   
+}
+
+
+/* --- CONTENEDOR HEADER --> */
+
+.contenedor .header {
+    text-align: center;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    grid-area: header;
+}
+
+.header .tituloheader {
+    font-family: 'Hachi Maru Pop';
+}
+
+.header img {
+    width: 100px;
+    top: 580px;
+    left: 170px;
+}
+
+
+/* --- CONTENEDOR CONTENIDO --> */
+
+.contenedor .contenido {
+    grid-area: contenido;
+}
+    
+area {
+    resize: none;
+    margin: 10px 10px;
+    background: cadetblue;
+    font-family:'Times New Roman', Times, serif;
+    color: #FFFFFF;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px; 
+    width: 90% ;
+    max-width: 100%;
+}
+
+area::placeholder {
+    font-size: 18px;
+    color: white;
+}
+
+.contenido .textarea-contenido {
+    margin: 30px; 
+}
+
+
+/* --- CONTENEDOR SIDERBAR --> */
+
+.contenedor .sidebar {
+    grid-column: 4 / 5;
+    max-width: 100%;
+    min-height: 90%; /*alto minimo del sidebar cuando llegue a 768 o menos*/
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    margin: 20px;
+    
+    border-radius: 23px;
+    background: #FFFFFF; 
+    border: solid;
+    border-color: #F8F988;
+    box-shadow: 5px 2px #F8F988;
+
+    grid-area: sidebar;
+}
+
+.sidebar img{
+    border-radius: 23px;
+    border: none;
+    border-color: #F8F988;
+    box-shadow: 1px 2px #F8F988;
+    justify-content: center;
+    align-content: center;
+}
+
+.sidebar p {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;   
+    font-weight: bold; 
+    font-style: italic;
+   
+    margin-top: 20px;
+    text-align: center;
+	display: flex;
+	align-items: self-start;
+    justify-content: center;
+}
+
+.sidebar .btnCopiar {
+    border-radius: 10px;
+    background: #F2ACBF;
+    padding: 10px;
+    margin: 0px 125px;
+    color: #0A3871;
+    font-weight: 540;
+    border-color: #F8F988;
+}
+
+
+/* --- BOTON ENCRIPTADOR --> */
+
+.contenedor .boton1 {
+    border: none;
+    background: transparent;
+    padding-right: 0;
+    grid-area: boton1; 
+}
+
+
+/* --- BOTON DESENCRIPTADOR --> */
+
+.contenedor .boton2 {
+    border: none;
+    background: transparent;
+    padding-left: 0;
+    grid-area: boton2;
+} 
+
+.contenedor .boton1 img {
+    width: 200px;
+    height: 121px;
+    max-width: 100% ;
+    max-height: 100%;
+}
+
+.contenedor .boton2 img {
+    width: 200px;
+    height: 121px;
+    max-width: 100% ;
+    max-height: 100%;
+}
+
+
+/* --- CONTENEDOR FOOTER --> */
+
+.contenedor .footer {
+    background: rgba(240, 255, 255, 0.5);
+    text-align: center;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    grid-area: footer;
+    font-size: 10px;
+    font-family: 'Hachi Maru Pop';
+}
+
+
+/* --- CONTENIDO RESPONSIVE --> */
+
+
+@media screen and (max-width: 800px){
+	.contenedor {
+		grid-template-areas:    "contenido contenido contenido contenido"
+                                "header boton1    boton1    boton2 "
+                                "header sidebar   sidebar   sidebar"
+                                "header footer    footer    footer";
+	}
+}
+

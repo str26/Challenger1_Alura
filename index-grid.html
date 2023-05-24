@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador/Desencriptador</title>
+    <link rel="stylesheet" href="style-grid.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Hachi+Maru+Pop&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  </head>
+
+  <body background="imagenes/malla.png" >
+    <div class="contenedor">
+
+      <header class="header">
+        <h2 class="tituloheader">Encriptador / Desencriptador</h2>
+            <img src="imagenes/serpiente-rosada.png" alt="serpiente-rosada"/>
+            <img src="imagenes/serpiente-rosada.png" alt="serpiente-rosada"/>
+            <img src="imagenes/serpiente-rosada.png" alt="serpiente-rosada"/>
+      </header>
+
+
+      <main class="contenido">
+        <textarea cols="35" rows="15" type="text" id="textarea" class="textarea-contenido"
+        placeholder="Welcome to the 90´s / Bienvenido a los '90, Escribe aqui la frase a Encriptar/Desencriptar"></textarea>
+        <p>&#9888; Solo letras minúsculas y sin acentos</p>
+      </main>
+
+
+      <aside class="sidebar"> 
+          <img src="imagenes/Group 13disket-grupo.png" alt="disket" />
+            <p> y la magia ocurre aqui </p>
+            <p > &#129668; &#129497;</p>
+
+            <section id="msjNoEncontrado">
+              <textarea  cols="25" rows="8"  id="resultado" 
+                placeholder="Ningun mensaje ha sido encontrado" readonly></textarea>
+            </section>
+        
+         
+          <button onclick="copiar()" id="btnCopiar" class="btnCopiar" type="button"> Copiar</button>
+      </aside>
+
+
+      <div class="boton1">
+        <button onclick="encriptador()" id="btnEncriptar" type="button" class="boton1">
+          <img class="encriptar" src="imagenes/boton-encriptador2.png" alt="boton-encriptador"/></button>
+		  </div>
+
+
+      <div class="boton2">
+        <button onclick="desencriptador()" id="botondes" type="button" class="boton2">
+          <img class="desencriptar" src="imagenes/boton-desencriptador2.png" alt="boton-desencriptador"/></button>
+		  </div>
+		  
+
+      <footer class="footer">
+		  	<p>Diseñado por DevNurse<br>Alura 2023</p>
+		  </footer>
+    </div>
+    
+    <script type="text/javascript" src="challenger.js"></script>
+  </body>
+ </html>
